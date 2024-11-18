@@ -1,3 +1,6 @@
+import './auth.css'
+
+import { Link } from "react-router-dom"
 
 
 export const RegisterPage = () => {
@@ -9,6 +12,7 @@ export const RegisterPage = () => {
     <>
       <div className="background"></div>
         <div className="card">
+        <img className='logo' src='logo.png'/>
         <form 
               className="form"
               id='register'
@@ -42,7 +46,14 @@ export const RegisterPage = () => {
                   </button>
         </form>
 
+        <footer>
+            Ya tienes cuenta
+            <p><Link to='/inicio'> Inicio</Link></p>
+        </footer>
+
         </div>
+
+        
     </>
   )
 }

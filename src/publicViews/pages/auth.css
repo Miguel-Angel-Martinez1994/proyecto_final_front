@@ -1,0 +1,143 @@
+/* Establece el modelo de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    display: grid; /* Utiliza un diseño de cuadrícula */
+    place-items: center; /* Centra los elementos en la cuadrícula */
+    gap: 50px; /* Espacio entre los elementos */
+    margin: 0; /* Elimina el margen por defecto */
+    height: 100vh; /* Altura del cuerpo igual a la altura de la ventana */
+    padding: 0 32px; /* Relleno horizontal */
+    background: #eff9ff; /* Color de fondo */
+    font-family: "Euclid Circular A", "Poppins"; /* Tipografía */
+}
+
+@media (width >= 500px) {
+    body {
+        padding: 0; /* Elimina el relleno en pantallas más anchas */
+    }
+}
+
+/* Estilos para el fondo de la página */
+.background {
+    position: fixed; /* Fija el fondo en la ventana */
+    top: -50vmin; /* Posiciona el fondo fuera de la vista */
+    left: -50vmin; /* Posiciona el fondo fuera de la vista */
+    width: 100vmin; /* Ancho del fondo */
+    height: 100vmin; /* Altura del fondo */
+    border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%; /* Bordes redondeados */
+    background: #4ccb65; /* Color de fondo */
+}
+
+/* Estilos para el fondo adicional */
+.background::after {
+    content: ""; /* Crea un pseudo-elemento */
+    position: inherit; /* Hereda la posición del elemento padre */
+    right: -50vmin; /* Posiciona el fondo adicional fuera de la vista */
+    bottom: -55vmin; /* Posiciona el fondo adicional fuera de la vista */
+    width: inherit; /* Hereda el ancho */
+    height: inherit; /* Hereda la altura */
+    border-radius: inherit; /* Hereda los bordes redondeados */
+    background: #008b0e; /* Color de fondo adicional */
+}
+
+/* Estilos para la tarjeta de formulario */
+.card {
+    overflow: hidden; /* Oculta el contenido que desborda */
+    position: relative; /* Posición relativa para el posicionamiento absoluto de los hijos */
+    z-index: 3; /* Asegura que la tarjeta esté por encima del fondo */
+    width: 94%; /* Ancho de la tarjeta */
+    margin: 0 20px; /* Margen horizontal */
+    padding: 170px 30px 54px; /* Relleno interno */
+    border-radius: 24px; /* Bordes redondeados */
+    background: #ffffff; /* Color de fondo de la tarjeta */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0 100px 100px rgb(0 0 0 / 10%); /* Sombra de la tarjeta */
+}
+
+/* Estilos para el fondo de la tarjeta */
+.card::before {
+    content: ""; /* Crea un pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta */
+    top: -880px; /* Posiciona el fondo de la tarjeta fuera de la vista */
+    left: 50%; /* Centra el fondo horizontalmente */
+    translate: -50% 0; /* Ajusta la posición */
+    width: 1000px; /* Ancho del fondo */
+    height: 1000px; /* Altura del fondo */
+    border-radius: 50%; /* Bordes redondeados */
+    background: #0dae10; /* Color de fondo */
+}
+
+/* Media query para pantallas más anchas */
+@media (width >= 500px) {
+    .card {
+        margin: 0; /* Elimina el margen en pantallas más anchas */
+        width: 360px; /* Ancho fijo de la tarjeta */
+    }
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.card > h2 {
+    font-size: 22px; /* Tamaño de fuente */
+    font-weight: 400; /* Peso de la fuente */
+    margin: 0 0 38px; /* Margen inferior */
+    color: rgb(0 0 0 / 38%); /* Color del texto */
+}
+
+/* Estilos para el formulario dentro de la tarjeta */
+.form {
+    margin: 45px 0; /* Margen vertical */
+    display: grid; /* Utiliza un diseño de cuadrícula */
+    gap: 12px; /* Espacio entre los elementos del formulario */
+}
+
+/* Estilos para los elementos de entrada y botón */
+.form :is(input, button) {
+    width: 100%; /* Ancho completo */
+    height: 56px; /* Altura de los elementos */
+    border-radius: 28px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: inherit; /* Hereda la tipografía del cuerpo */
+}
+
+/* Estilos para los campos de entrada */
+.form > input {
+    border: 0; /* Sin borde */
+    padding: 0 24px; /* Relleno horizontal */
+    color: #222222; /* Color del texto */
+    background: #ededed; /* Color de fondo */
+}
+
+/* Estilos para el texto del placeholder */
+.form > input::placeholder {
+    color: rgb(0 0 0 / 28%); /* Color del texto del placeholder */
+}
+
+/* Estilos para el botón del formulario */
+.form > button {
+    border: 0; /* Sin borde */
+    color: #f9f9f9; /* Color del texto */
+    background: #0dae10; /* Color de fondo */
+    display: grid; /* Utiliza un diseño de cuadrícula */
+    place-items: center; /* Centra el contenido */
+    font-weight: 500; /* Peso de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el pie de página de la tarjeta */
+.card > footer {
+    color: #a1a1a1; /* Color del texto */
+}
+
+
+/* Estilos para el logo */
+.card .logo {
+    position: absolute; /* Posiciona el logo de forma absoluta */
+    top: 130px; /* Posición desde la parte superior */
+    left: 50%; /* Centra el logo horizontalmente */
+    translate: -50% 0; /* Ajusta la posición */
+    height: 64px; /* Altura del logo */
+}

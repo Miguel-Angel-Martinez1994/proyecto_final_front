@@ -1,9 +1,18 @@
 import { NavLink } from "react-router-dom"
+import { UserContext } from "../../../context/UserContext"
+import { useContext } from "react"
 
 
 export const NavBarUser = () => {
+
+    const {logout}=useContext(UserContext)
+
+    const handlerClick=()=>{
+        logout()
+    }
   return (
     <>
+   
         <ul>
             <li>
                 <NavLink
@@ -16,27 +25,19 @@ export const NavBarUser = () => {
 
             <li>
                 <NavLink
-                    to="/inicio"
+                    to="/crearLibro"
                 >
-                    Inicio
-
-                </NavLink>
-            </li>
-                
-            <li>
-                <NavLink
-                    to="/categoria1">
-                        Categoria1
+                    Nuevo Libro
                 </NavLink>
             </li>
 
             <li>
-                <NavLink
-                    to="/categoria2">
-                        Categoria2
-                </NavLink>
+                <div className="navbar-icons">
+                    <button  onClick={handlerClick} id="boton-salir">Salir</button>
+                </div>
             </li>
         </ul>
+     
     </>
   )
 }

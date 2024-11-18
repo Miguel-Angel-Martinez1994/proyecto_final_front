@@ -1,0 +1,183 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #6eb27c;
+    color: #fff;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    /* Utiliza flexbox para organizar los elementos dentro del header */
+    justify-content: space-between;
+    /* Espacia los elementos de manera que haya espacio entre ellos */
+    align-items: center;
+    /* Alinea verticalmente los elementos en el centro */
+    padding: 20px 40px;
+    /* Agrega un padding de 20px arriba y abajo, y 40px a los lados */
+    background: white;
+    /* Establece un fondo blanco para el header */
+    position: fixed;
+    /* Fija el header en la parte superior de la ventana */
+    width: 100%;
+    /* Hace que el header ocupe el 100% del ancho de la ventana */
+    top: 0;
+    /* Posiciona el header en la parte superior */
+    z-index: 1000;
+    /* Asegura que el header esté por encima de otros elementos */
+}
+
+.logo {
+    font-size: 1.5em;
+    /* Establece un tamaño de fuente más grande para el logo */
+    font-weight: bold;
+    /* Aplica un peso de fuente bold (negrita) */
+    
+}
+
+.logotipo {
+    height: 50px;
+    /* Establece la altura de la imagen del logo */
+}
+
+.navbar {
+    flex: 1;
+    /* Permite que la barra de navegación ocupe el espacio restante */
+    display: flex;
+    /* Utiliza flexbox para organizar los elementos dentro de la navbar */
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    /* Organiza los elementos de la lista en una fila */
+    gap: 30px;
+    /* Agrega un espacio de 30px entre los elementos de la lista */
+}
+
+.navbar a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: black;
+    /* Establece el color del texto de los enlaces a negro */
+    font-size: 1em;
+    /* Establece el tamaño de la fuente de los enlaces */
+    font-weight: 600;
+    /* Aplica un peso de fuente semi-negrita */
+    transition: color 0.3s;
+    /* Agrega una transición suave al color del texto cuando se cambia */
+}
+
+.navbar a:hover {
+    color: #46c82f;
+    /* Cambia el color del texto a un verde más claro al pasar el mouse */
+}
+
+.navbar-icons {
+    display: flex;
+    /* Utiliza flexbox para organizar los botones en línea */
+    gap: 20px;
+    /* Agrega un espacio de 20px entre los botones */
+}
+
+.navbar-icons a {
+    
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    font-size: 1.2em;
+    /* Establece un tamaño de fuente más grande para los enlaces de la navbar */
+    color: black;
+    /* Establece el color del texto de los enlaces a negro */
+}
+
+.section-buscador {
+    text-align: center;
+    /* Centra el texto dentro de la sección hero */
+    color: #fff;
+    /* Establece el color del texto a blanco */
+    z-index: 1;
+    /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+
+button {
+    padding: 10px 20px;
+    /* Agrega un padding de 10px arriba y abajo, y 20px a los lados */
+    font-size: 1em;
+    /* Establece el tamaño de la fuente del botón */
+    color: #1a1a1a;
+    /* Establece el color del texto del botón a un gris oscuro */
+    background-color: transparent;
+    /* Establece el fondo del botón como transparente */
+    border: 1px solid;
+    /* Agrega un borde al botón */
+    border-color: black;
+    /* Establece el color del borde a negro */
+    border-radius: 5px;
+    /* Redondea las esquinas del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    transition: background-color 0.3s;
+    /* Agrega una transición suave al color de fondo del botón */
+}
+
+button:hover {
+    background-color: #46c82f34;
+    /* Cambia el fondo del botón a un verde claro semitransparente al pasar el mouse */
+}
+
+#Buscador {
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 5px 5px;
+    /* Establece un icono de búsqueda como fondo del input */
+    background-color: white;
+    /* Establece el color de fondo del input a blanco */
+    background-size: 24px;
+    /* Ajusta el tamaño del icono de búsqueda */
+    width: 500px;
+    /* Establece un ancho fijo para el input */
+    border: 1px solid white;
+    /* Establece un borde blanco para el input */
+    border-radius: 20px;
+    /* Redondea las esquinas del input */
+    border-bottom: solid 1px white;
+    /* Agrega un borde inferior sólido blanco */
+    padding: 10px 10px 10px 30px;
+    /* Agrega padding para el texto dentro del input */
+    outline: none;
+    /* Elimina el contorno por defecto al enfocar el input */
+}
+
+.button_send {
+    border-radius: 50px;
+    color: white;
+    border: 1px solid white;
+}
+
+.button_send:hover {
+    background-color: #4b9e5b;
+}
+
+.gallery_book {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+

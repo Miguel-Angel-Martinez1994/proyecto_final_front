@@ -1,8 +1,8 @@
 import React from 'react'
-import { CardLibro } from './CardLibro'
+import { CardLibro } from '../cardLibro/CardLibro'
 
 export const GridLibros = ({categoria}) => {
-    console.log("entrando en grid libros",categoria)
+    
 
     const dataFetch=[
         {

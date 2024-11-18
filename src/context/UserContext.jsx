@@ -12,7 +12,11 @@ export const UserProvider = ({children}) => {
     const [isAuthenticated, setIsAuthenticated]=useState(false)
 
     //cuando se loguee el usuario, cambiamos el estado de su autentificacion como verdadero
-    const login =()=>setIsAuthenticated(true)
+    const login =()=>{
+        
+
+      setIsAuthenticated(true)
+    }
 
     //cuando nos salgamos de la aplicacion, volvemos a cambiar el estado de la autentificacion a falso y vaciamos el provider de los datos que daba
     const logout=()=>{
@@ -26,7 +30,6 @@ export const UserProvider = ({children}) => {
         usuario,
         setUsuario,
         isAuthenticated,
-        setIsAuthenticated,
         login,
         logout
     }}>

@@ -1,6 +1,10 @@
+import './auth.css'
+
 import { useContext } from "react"
 import { UserContext } from "../../context/UserContext"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useUser } from '../../hooks/useUser'
+
 
 export const LoginPage = () => {
   const {mensaje, usuario,setUsuario,isAuthenticated,login}=useContext(UserContext)
@@ -20,6 +24,7 @@ export const LoginPage = () => {
       //aqui guardaremos en formato JSON los datos que recibimos via token de firebase, del usuario que se ha logueado y verificaremos el rol que tendra
       id:1,
       nombre,
+      password
     }
 
     setUsuario(usuarioLogueado)
@@ -30,6 +35,7 @@ export const LoginPage = () => {
     <>
         <div className="background"></div>
           <div className="card">
+            <img className='logo' src='logo.png'/>
             <form 
               className="form"
               id='login'
@@ -51,7 +57,14 @@ export const LoginPage = () => {
                       Iniciar Sesion
                   </button>
               </form>
+
+              <footer>
+                No tienes cuenta
+                <p> <Link to='/registro'> Registrate</Link> </p>
+              </footer>
+
           </div>
+          
     </>
   )
 }

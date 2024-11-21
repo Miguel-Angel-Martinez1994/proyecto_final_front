@@ -1,6 +1,7 @@
-import React from 'react'
+import { Link } from "react-router-dom"
+import "./cardLibro.css"
 
-export const CardLibro = ({id,titulo,autor,sinopsis,genero}) => {
+export const CardLibro = ({libro_id,titulo,autor,sinopsis,genero}) => {
 
   return (
     <>
@@ -9,6 +10,7 @@ export const CardLibro = ({id,titulo,autor,sinopsis,genero}) => {
             <p>{autor}</p>
             <p>{sinopsis}</p>
             <p>{genero}</p>
+            <Link to={`/verlibro/${libro_id}`} className="">Ver Mas</Link>
         </div>
     </>
   )

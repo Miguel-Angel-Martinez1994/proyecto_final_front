@@ -33,7 +33,7 @@ export const LoginPage = () => {
   }
   return (
     <>
-        <div className="background"></div>
+       
           <div className="card">
             <img className='logo' src='logo.png'/>
             <form 

@@ -1,8 +1,19 @@
-# React + Vite
+# Proyecto final: Bibliotopia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Parte Front con React
 
-Currently, two official plugins are available:
+### Como instalar el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Deberemos descargarnos el proyecto de github y copiarlo en una nueva carpeta con el comando de github de git clone.
+
+- Una vez descargado el proyecto, deberemos ejecutar el comando yarn para descargarnos los node-modules
+
+`yarn`
+
+- creamos nuestro archivo .env y pondremos nuestra url para los endpoints 
+
+`VITE_URL_BASE=Nuestra`
+
+- Por ultimo, vamos a la carpeta donde se encuentra la app y la abrimos usando la consola, una vez en la consola, ejecutamos yarn dev
+
+`yarn dev`

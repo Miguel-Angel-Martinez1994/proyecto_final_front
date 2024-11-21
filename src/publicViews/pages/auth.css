@@ -5,12 +5,10 @@
 
 /* Estilos para el cuerpo de la página */
 body {
-    display: grid; /* Utiliza un diseño de cuadrícula */
-    place-items: center; /* Centra los elementos en la cuadrícula */
+    top: 12px;
     gap: 50px; /* Espacio entre los elementos */
     margin: 0; /* Elimina el margen por defecto */
     height: 100vh; /* Altura del cuerpo igual a la altura de la ventana */
-    padding: 0 32px; /* Relleno horizontal */
     background: #eff9ff; /* Color de fondo */
     font-family: "Euclid Circular A", "Poppins"; /* Tipografía */
 }
@@ -60,7 +58,7 @@ body {
 
 /* Estilos para el fondo de la tarjeta */
 .card::before {
-    content: ""; /* Crea un pseudo-elemento */
+    /*content: "";*/ /* Crea un pseudo-elemento */
     position: absolute; /* Posiciona el pseudo-elemento de forma absoluta */
     top: -880px; /* Posiciona el fondo de la tarjeta fuera de la vista */
     left: 50%; /* Centra el fondo horizontalmente */
@@ -135,7 +133,7 @@ body {
 
 /* Estilos para el logo */
 .card .logo {
-    position: absolute; /* Posiciona el logo de forma absoluta */
+    position: initial; /* Posiciona el logo de forma absoluta */
     top: 130px; /* Posición desde la parte superior */
     left: 50%; /* Centra el logo horizontalmente */
     translate: -50% 0; /* Ajusta la posición */

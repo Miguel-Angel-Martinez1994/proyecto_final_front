@@ -15,14 +15,6 @@ body {
     /* Padding alrededor del contenido */
 }
 
-/* Estilo del header */
-header {
-    text-align: center;
-    /* Centra el texto del encabezado */
-    margin-bottom: 20px;
-    /* Margen inferior para separar del formulario */
-}
-
 h1 {
     font-size: 2em;
     /* Tamaño de fuente grande para el título */

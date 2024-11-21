@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import { UserProvider } from './context/UserContext'
 import { AppRouters } from './routers/AppRouters'
-import { Link } from 'react-router-dom'
+import { NavBar } from './ui/components/navBar/NavBar'
 
 
 
@@ -13,10 +11,12 @@ function App() {
   return (
     <>
     <UserProvider>
-      
-      <AppRouters/>
+      <header>
+        <NavBar/>
+      </header>
+      <main><AppRouters/></main>
 
-        
+      <footer>copyright</footer>        
 
     </UserProvider>
     </>
